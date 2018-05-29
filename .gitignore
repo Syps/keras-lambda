@@ -1,3 +1,4 @@
 src/model.h5
-src/*.zip
+*.zip
 .idea
+Makefile

@@ -1,11 +1,14 @@
 from __future__ import print_function
 import os
-
+import sys
 
 if os.environ.get('LAMBDA_TASK_ROOT') is None:
     print("just exit, we are not in a lambda function"),
     import sys
     sys.exit(0)
+
+HERE = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(os.path.join(HERE, "packages"))
 
 import json
 import numpy as np
